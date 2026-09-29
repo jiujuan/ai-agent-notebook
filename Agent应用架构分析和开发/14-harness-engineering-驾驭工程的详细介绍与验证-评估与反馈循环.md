@@ -183,7 +183,7 @@ Harness Engineering 聚焦于构建**确定性的运行时层**（deterministic 
 
 这个架构在编码 Agent、自动化工作流等场景中都非常适用。如果你有特定领域（如 coding agent）或约束，我可以进一步细化某个层或画伪代码/图示。
 
-## 三、验证、评估与反馈循环 / Verification, Evaluator, Hooks
+## 三、验证、评估与反馈循环 / Verification, Evaluator, Feedback Loops
 
 **验证、评估与反馈循环（Verification, Evaluator & Feedback Loops）** 是 Harness Engineering 中实现**可靠性与自愈性**的关键子系统。它直接对应“自我纠正、质量把关；失败时触发恢复或人类介入”的核心目标，是将不可靠的 LLM 循环转化为生产级 Agent 的“刹车 + 安全带 + 修复车间”。
 
