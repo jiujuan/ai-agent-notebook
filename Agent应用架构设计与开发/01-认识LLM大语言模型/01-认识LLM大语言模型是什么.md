@@ -24,7 +24,7 @@
 
 ## 二、用一张图理解 LLM 的基本原理
 
-![LLM-原理简单图解](../images/AI-Agent-Arch-LLM-原理简单图解.png)
+![LLM-原理简单图解](../../images/AI-Agent-Arch-LLM-原理简单图解.png)
 
 这张图展示了 LLM 的基本过程：先通过训练学习规律，再在实际使用时，根据用户提供的内容生成输出。
 
@@ -63,7 +63,7 @@ Token 可能是一个汉字、一个词、一个词的一部分、标点符号�
 
 示意性 Token 切分（并非特定模型的真实切分结果）
 
-![](../images/AI-Agent-Arch-word-token.png)
+![](../../images/AI-Agent-Arch-word-token.png)
 
 Token 是文本处理的基本单位。模型先将 Token 转换为数字 ID，再将其映射为向量，交给神经网络处理。
 
@@ -87,7 +87,7 @@ Token 是文本处理的基本单位。模型先将 Token 转换为数字 ID，�
 
 如果选择了“好”，输入就变成“今天的天气非常好”，模型接着预测下一个 Token，如此循环，逐步形成完整的回答。
 
-![学习预测下一个 Token](../images/AI-Agent-Arch-word-token-概率-02.png)
+![学习预测下一个 Token](../../images/AI-Agent-Arch-word-token-概率-02.png)
 
 这也解释了为什么同一个问题重复提问，有时会得到不同的回答。生成过程可能受到采样策略、温度参数、上下文和系统设置的影响。
 
@@ -105,7 +105,7 @@ LLM 通常建立在深度神经网络之上。神经网络由大量计算单元�
 
 可以把它想象成一系列信息处理步骤：
 
-![](../images/AI-Agent-Arch-LLM-神经网络.png)
+![](../../images/AI-Agent-Arch-LLM-神经网络.png)
 
 这里的“内部表示”很重要。模型并不是只把输入的字面形式进行简单匹配，而是通过训练形成能够表达多种关系的数值表示。
 
@@ -125,7 +125,7 @@ Transformer 的重要能力之一是通过注意力机制（Attention），根�
 
 这里的“它”指什么，需要结合句子上下文判断。注意力机制能够帮助模型计算不同位置的信息对当前处理有多重要。
 
-![Transformer 注意力机制（Attention）](../images/AI-Agent-Arch-Transformer-attention.png)
+![Transformer 注意力机制（Attention）](../../images/AI-Agent-Arch-Transformer-attention.png)
 
 注意力机制让模型可以综合多个位置的信息，而不是只看紧邻当前 Token 的几个字。
 
@@ -143,7 +143,7 @@ Transformer 还包含其他关键组件，例如前馈网络、残差连接和�
 
 模型训练时，会比较预测结果与训练目标之间的差异，通过优化算法不断调整参数，让后续预测更符合训练目标。
 
-![](../images/AI-Agent-Arch-大模型训练参数.png)
+![](../../images/AI-Agent-Arch-大模型训练参数.png)
 
 参数规模是描述模型大小的一个重要指标，例如十亿参数（1B）、百亿参数（10B）等。但参数数量并不能单独决定模型能力。训练数据质量、模型结构、训练方法、推理策略和后续对齐等因素同样重要。
 
@@ -151,7 +151,7 @@ Transformer 还包含其他关键组件，例如前馈网络、残差连接和�
 
 一个能够直接用于用户交互的 LLM，通常不是仅完成一次训练就能得到的。可以把整个过程分成三个主要阶段。
 
-![](../images/AI-Agent-Arch-pretraining-SFT-后训练.png)
+![](../../images/AI-Agent-Arch-pretraining-SFT-后训练.png)
 
 ### 1.预训练：打好基础
 
@@ -191,7 +191,7 @@ Transformer 还包含其他关键组件，例如前馈网络、残差连接和�
 
 当你向 AI 助手提问时，通常发生的是推理，而不是从头训练模型。
 
-![](../images/AI-Agent-Arch-一次LLM推理的基本过程.png)
+![](../../images/AI-Agent-Arch-一次LLM推理的基本过程.png)
 
 例如，你问：“什么是数据库索引？”
 
@@ -214,7 +214,7 @@ Transformer 还包含其他关键组件，例如前馈网络、残差连接和�
 
 这些内容都会占用上下文容量。具体容量取决于模型及其配置，不能认为所有模型都具有相同的上下文长度。
 
-![](../images/AI-Agent-Arch-context-widow.png)
+![](../../images/AI-Agent-Arch-context-widow.png)
 
 这也解释了为什么在长对话中，AI 有时会遗漏早期信息。应用可能只保留部分历史，或者使用摘要、检索和记忆机制管理上下文。
 
@@ -248,7 +248,7 @@ LLM 的一个重要局限是可能产生幻觉（Hallucination），也就是生
 
 这是学习 AI 应用架构时最容易混淆的三个概念。
 
-![](../images/AI-Agent-Arch-LLM-RAG-Agent.png)
+![](../../images/AI-Agent-Arch-LLM-RAG-Agent.png)
 
 举一个实际例子：用户要求“分析本季度销售情况，找出下降原因，并生成报告”。
 
@@ -263,7 +263,7 @@ LLM 的一个重要局限是可能产生幻觉（Hallucination），也就是生
 
 如果你准备进一步学习 AI 应用开发，建议按照下面的顺序理解这些概念。
 
-![](../images/AI-Agent-Arch-LLM-core-concept.png)
+![](../../images/AI-Agent-Arch-LLM-core-concept.png)
 
 **01、Token 与 Embedding**
 
