@@ -41,7 +41,7 @@ Agent：组织与执行 - 结合模型、工具、状态和控制逻辑，将目
 
 关键区别：LLM 提供智能能力，Agent 系统将这种能力组织成持续执行任务的过程。
 
-![](../images/AI-Agent-Arch-LLM-vs-Agent-different-feature.png)
+![LLM 与 Agent 的能力差异](../../images/AI-Agent-Arch-LLM-vs-Agent-different-feature.png)
 
 当然，现代模型也可以通过 API、内置搜索或其他集成能力完成部分操作。但这些操作背后仍然需要相应的执行环境、接口和控制机制。
 
@@ -57,7 +57,7 @@ Agent：组织与执行 - 结合模型、工具、状态和控制逻辑，将目
 
 用户提出目标 -> LLM 理解目标、选择下一步行动 -> 调用工具，获取真实执行结果 -> 更新状态，继续判断或修正 -> 检查完成条件，返回最终结果
 
-![LLM 问答vsAgent 执行任务](../images/AI-Agent-Arch-LLM-anster-agent-exec-task.png)
+![LLM 问答vsAgent 执行任务](../../images/AI-Agent-Arch-LLM-anster-agent-exec-task.png)
 
 需要注意，Agent 并不意味着每个任务都必须多次调用模型。有些简单任务一次模型调用就可以完成；另一些任务则需要几十次甚至更多步骤。真正的区别在于，系统是否具有根据执行结果继续决策和推进任务的机制。
 
@@ -100,7 +100,7 @@ Agent Loop：持续协调上述组件
 
 这是逻辑架构图，不代表所有 Agent 都必须使用完全相同的模块划分。
 
-![Agent 的基本组成](../images/AI-Agent-Arch-Agent-basic-component.png)
+![Agent 的基本组成](../../images/AI-Agent-Arch-Agent-basic-component.png)
 
 ### 2.2 为什么不能简单地把 Agent 等同于 LLM？
 
@@ -202,7 +202,7 @@ Agent 不能只按照原计划机械地执行到底，而应该结合真实结�
 满足完成条件后交付结果
 ```
 
-![Agent 的运行过程](../images/AI-Agent-Arch-Agent-exec-Process-Goal-Plan-Act-Observe-Evaluate-Finish.png)
+![Agent 的运行过程](../../images/AI-Agent-Arch-Agent-exec-Process-Goal-Plan-Act-Observe-Evaluate-Finish.png)
 
 
 
@@ -271,7 +271,7 @@ while 任务尚未结束:
 系统确认必要信息已经获取，且输出符合要求后，返回最终建议。
 ```
 
-![一次完整的 Agent Loop 会发生什么](../images/AI-Agent-Arch-agent-loop-one-complete-process.png)
+![一次完整的 Agent Loop 会发生什么](../../images/AI-Agent-Arch-agent-loop-one-complete-process.png)
 
 这里有一个值得特别注意的细节：工具调用请求与工具执行是两个不同的动作。
 
@@ -338,7 +338,7 @@ while 任务尚未结束:
 将工具结果交回模型，作为下一轮决策的依据
 ```
 
-![模型是调用工具的过程](../images/AI-Agent-Arch-Tool-call-process.png)
+![模型是调用工具的过程](../../images/AI-Agent-Arch-Tool-call-process.png)
 
 以天气查询为例，模型可能生成类似下面的结构化请求：
 
@@ -435,7 +435,7 @@ Memory 和 Context 经常一起出现，但它们承担不同的职责。
 
 可以将 Memory 理解为可供选择的信息来源，将 Context 理解为某次模型调用实际使用的信息集合。记忆不一定全部进入上下文。
 
-![Agent的记忆系统与上下文](../images/AI-Agent-Arch-memory-context-intro.png)
+![Agent的记忆系统与上下文](../../images/AI-Agent-Arch-memory-context-intro.png)
 
 例如，用户长期偏好使用简洁、专业的公众号写作风格，这属于可以保存的偏好记忆。
 
@@ -562,7 +562,7 @@ print(answer)
 
 它展示了 Agent 最重要的控制流程：
 
-![Agent重要的控制流程](../images/AI-Agent-Arch-agent-controll-process.png)
+![Agent重要的控制流程](../../images/AI-Agent-Arch-agent-controll-process.png)
 
 1.`mock_llm(messages)`模型返回下一步决策
 
