@@ -42,11 +42,14 @@
 
 建议创建一个名为 `first-agent` 的项目。
 
-![](../../images/AI-Agent-ARCH-first-agent-project.png)
+![](../../images/AI-Agent-Arch-ch04-first-agent-project.png)
+
+上面图片中2个 init.py 实际代码目录中应该是  `__init__.py` ， 在 first-agent 中它们都是没有代码的空文件。
 
 这个结构刻意保持简单，但已经体现了几个重要的架构边界：
 
 - `models.py` 不负责执行工具。
+- `models_factory.py` 模型实例创建。
 - `tools.py` 不负责决定下一步行动。
 - `agent.py` 不需要了解不同模型供应商的底层响应格式。
 - `decision.py` 定义各组件之间交换的数据结构。
