@@ -66,3 +66,23 @@ cd first-agent
 python -m venv .venv
 ```
 
+激活虚拟环境。
+
+- Windows PowerShell：
+
+```powershell
+.venv\Scripts\Activate.ps1
+```
+
+- macOS 或 Linux：
+
+```bash
+source .venv/bin/activate
+```
+
+安装依赖：
+
+```bash
+pip install openai anthropic pydantic python-dotenv pytest
+```
+
